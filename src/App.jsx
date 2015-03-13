@@ -1,10 +1,9 @@
-var React = require('react'),
-    DOM = React.DOM, div = DOM.div, button = DOM.button, ul = DOM.ul, li = DOM.li
+var React = require('react');
 
 // This is just a simple example of a component that can be rendered on both
 // the server and browser
 
-module.exports = React.createClass({
+module.exports = React.createClass({displayName: "exports",
 
   // We initialise its state by using the `props` that were passed in when it
   // was first rendered. We also want the button to be disabled until the
@@ -27,20 +26,21 @@ module.exports = React.createClass({
     })
   },
 
-  // For ease of illustration, we just use the React JS methods directly
-  // (no JSX compilation needed)
   // Note that we allow the button to be disabled initially, and then enable it
   // when everything has loaded
   render: function() {
-
-    return div(null,
-
-      button({onClick: this.handleClick, disabled: this.state.disabled}, 'Add Item'),
-
-      ul({children: this.state.items.map(function(item) {
-        return li(null, item)
-      })})
-
-    )
+    var listItems = this.state.items.map(function(item) {
+      return (
+        <li>{item}</li>
+      )
+    });
+    return (
+      <div>
+        <button onClick={this.handleClick} disabled={this.state.disabled}>Add Item</button>
+        <ul>
+          {listItems}
+        </ul>
+      </div>
+    );
   },
 })

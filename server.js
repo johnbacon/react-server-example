@@ -4,7 +4,7 @@ var http = require('http'),
     React = require('react'),
     DOM = React.DOM, body = DOM.body, div = DOM.div, script = DOM.script,
     // This is our React component, shared by server and browser thanks to browserify
-    App = React.createFactory(require('./App'))
+    App = React.createFactory(require('./build/App'))
 
 
 // Just create a plain old HTTP server that responds to two endpoints ('/' and
@@ -61,7 +61,7 @@ http.createServer(function(req, res) {
       // even a JSON-typed script tag, but this option is safe from namespacing
       // and injection issues, and doesn't require parsing
       script({dangerouslySetInnerHTML: {__html:
-        'var App = React.createFactory(require("./App"));' +
+        'var App = React.createFactory(require("./build/App"));' +
         'React.render(App(' + safeStringify(props) + '), document.getElementById("content"))'
       }})
     ))
@@ -82,7 +82,7 @@ http.createServer(function(req, res) {
     // so that it uses the global variable (from the CDN JS file) instead of
     // bundling it up with everything else
     browserify()
-      .require('./App')
+      .require('./build/App')
       .transform({global: true}, literalify.configure({react: 'window.React'}))
       .bundle()
       .pipe(res)

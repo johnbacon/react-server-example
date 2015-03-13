@@ -4,6 +4,12 @@
   "description": "A very simple implementation of server-side React rendering",
   "main": "server.js",
   "repository": "mhart/react-server-example",
+  "scripts": {
+    "build:js": "jsx src build -x jsx",
+    "watch:js": "jsx --watch src build -x jsx",
+    "build": "npm run build:js",
+    "build:watch": "parallelshell \"npm run watch:js\""
+  },
   "keywords": [
     "react",
     "reactjs",
@@ -16,5 +22,8 @@
     "browserify": "^9.0.3",
     "literalify": "^0.4.0",
     "react": "^0.13.0"
+  },
+  "devDependencies": {
+    "parallelshell": "^1.1.1"
   }
 }
