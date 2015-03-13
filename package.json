@@ -1,11 +1,13 @@
 {
   "name": "react-server-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very simple implementation of server-side React rendering",
   "main": "server.js",
   "repository": "johnbacon/react-server-example",
-  // For more information about using NPM as a build tool, see the following:
-  // http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
+  "comments": {
+    "//": "For more information about using NPM as a build tool, see the following:",
+    "//": "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
+  },
   "scripts": {
     "build:js": "jsx src build -x jsx",
     "watch:js": "jsx --watch src build -x jsx",
