@@ -5,8 +5,7 @@
   "main": "server.js",
   "repository": "johnbacon/react-server-example",
   "comments": {
-    "//": "For more information about using NPM as a build tool, see the following:",
-    "//": "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
+    "Using NPM as a build tool": "http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/"
   },
   "scripts": {
     "build:js": "jsx src build -x jsx",
