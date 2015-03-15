@@ -6,6 +6,8 @@ A simple example of how to do server-side rendering with the
 shared between server and browser, as well as getting fast initial page loads
 and search-engine-friendly pages.
 
+This fork has been taken from [mhart/react-server-example](https://github.com/mhart/react-server-example) and augmented to support a JSX build process.
+
 Example
 -------
 
