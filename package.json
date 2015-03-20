@@ -1,6 +1,6 @@
 {
   "name": "react-server-example",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A very simple implementation of server-side React rendering",
   "main": "server.js",
   "repository": "johnbacon/react-server-example",
@@ -26,10 +26,10 @@
   "license": "MIT",
   "dependencies": {
     "browserify": "^9.0.3",
-    "literalify": "^0.4.0",
-    "react": "^0.13.0"
+    "literalify": "^0.4.0"
   },
   "devDependencies": {
-    "parallelshell": "^1.1.1"
+    "parallelshell": "^1.1.1",
+    "react": "^0.13.1"
   }
 }
