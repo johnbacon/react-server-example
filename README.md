@@ -9,6 +9,8 @@ and search-engine-friendly pages.
 A more complex example with shared routing and data fetching can be found at
 [react-server-routing-example](https://github.com/mhart/react-server-routing-example).
 
+This fork has been taken from [mhart/react-server-example](https://github.com/mhart/react-server-example) and augmented to support a JSX build process.
+
 Example
 -------
 
